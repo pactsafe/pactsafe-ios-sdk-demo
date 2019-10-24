@@ -3,18 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		301296F72A838510DC64FEC8 /* Pods_PactSafe_iOS_Demo_PactSafe_iOS_DemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EBAF997F42E96E22D0089AD /* Pods_PactSafe_iOS_Demo_PactSafe_iOS_DemoUITests.framework */; };
+		4206BAA5234E22F600044421 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4206BAA4234E22F600044421 /* LoginViewController.swift */; };
+		4206BAA7234E269300044421 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4206BAA6234E269300044421 /* HomeViewController.swift */; };
+		426A19272350BADD00C10D5A /* LoginWithCheckboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426A19262350BADD00C10D5A /* LoginWithCheckboxViewController.swift */; };
+		42751D73234E14AC00D20668 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42751D72234E14AC00D20668 /* StartViewController.swift */; };
+		42751D75234E167E00D20668 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42751D74234E167E00D20668 /* GoogleService-Info.plist */; };
 		42E65E8A233D0B5A00B41888 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E65E89233D0B5A00B41888 /* AppDelegate.swift */; };
 		42E65E8C233D0B5A00B41888 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E65E8B233D0B5A00B41888 /* SceneDelegate.swift */; };
-		42E65E8E233D0B5A00B41888 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E65E8D233D0B5A00B41888 /* ViewController.swift */; };
+		42E65E8E233D0B5A00B41888 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E65E8D233D0B5A00B41888 /* SignUpViewController.swift */; };
 		42E65E91233D0B5A00B41888 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42E65E8F233D0B5A00B41888 /* Main.storyboard */; };
 		42E65E93233D0B5D00B41888 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42E65E92233D0B5D00B41888 /* Assets.xcassets */; };
 		42E65E96233D0B5D00B41888 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42E65E94233D0B5D00B41888 /* LaunchScreen.storyboard */; };
 		42E65EA1233D0B5D00B41888 /* PactSafe_iOS_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E65EA0233D0B5D00B41888 /* PactSafe_iOS_DemoTests.swift */; };
 		42E65EAC233D0B5D00B41888 /* PactSafe_iOS_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E65EAB233D0B5D00B41888 /* PactSafe_iOS_DemoUITests.swift */; };
+		42E65EBC233D0B8000B41888 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 42E65EBB233D0B8000B41888 /* SwiftPackageProductDependency */; };
+		61AF291F4CD6D86755BAAC10 /* Pods_PactSafe_iOS_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DDBECA33DE0D13DB3F00CF /* Pods_PactSafe_iOS_Demo.framework */; };
+		6D2ABFA95A0DF70500CAB2E5 /* Pods_PactSafe_iOS_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FAD56E23474A27B0FD1F24B /* Pods_PactSafe_iOS_DemoTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +44,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0EBAF997F42E96E22D0089AD /* Pods_PactSafe_iOS_Demo_PactSafe_iOS_DemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PactSafe_iOS_Demo_PactSafe_iOS_DemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E98F2F76102784C78B55569 /* Pods-PactSafe iOS DemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PactSafe iOS DemoTests.debug.xcconfig"; path = "Target Support Files/Pods-PactSafe iOS DemoTests/Pods-PactSafe iOS DemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4206BAA4234E22F600044421 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4206BAA6234E269300044421 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		426A19262350BADD00C10D5A /* LoginWithCheckboxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithCheckboxViewController.swift; sourceTree = "<group>"; };
+		42751D72234E14AC00D20668 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		42751D74234E167E00D20668 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		42E65E86233D0B5A00B41888 /* PactSafe iOS Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PactSafe iOS Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E65E89233D0B5A00B41888 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42E65E8B233D0B5A00B41888 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		42E65E8D233D0B5A00B41888 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		42E65E8D233D0B5A00B41888 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		42E65E90233D0B5A00B41888 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42E65E92233D0B5D00B41888 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42E65E95233D0B5D00B41888 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +65,14 @@
 		42E65EA7233D0B5D00B41888 /* PactSafe iOS DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PactSafe iOS DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E65EAB233D0B5D00B41888 /* PactSafe_iOS_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PactSafe_iOS_DemoUITests.swift; sourceTree = "<group>"; };
 		42E65EAD233D0B5D00B41888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42E65EB9233D0B7B00B41888 /* PactSafe */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PactSafe; path = ../PactSafe; sourceTree = "<group>"; };
+		48E4FBA76CEB87EEA3FB7B66 /* Pods-PactSafe iOS Demo-PactSafe iOS DemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PactSafe iOS Demo-PactSafe iOS DemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-PactSafe iOS Demo-PactSafe iOS DemoUITests/Pods-PactSafe iOS Demo-PactSafe iOS DemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		573867E1D5B6A5E170DB52DD /* Pods-PactSafe iOS DemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PactSafe iOS DemoTests.release.xcconfig"; path = "Target Support Files/Pods-PactSafe iOS DemoTests/Pods-PactSafe iOS DemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		64AB8ECB482D9B62DF5D32BB /* Pods-PactSafe iOS Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PactSafe iOS Demo.release.xcconfig"; path = "Target Support Files/Pods-PactSafe iOS Demo/Pods-PactSafe iOS Demo.release.xcconfig"; sourceTree = "<group>"; };
+		6FAD56E23474A27B0FD1F24B /* Pods_PactSafe_iOS_DemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PactSafe_iOS_DemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74DDBECA33DE0D13DB3F00CF /* Pods_PactSafe_iOS_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PactSafe_iOS_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BE2E1D1AC541CE081B3DBEC /* Pods-PactSafe iOS Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PactSafe iOS Demo.debug.xcconfig"; path = "Target Support Files/Pods-PactSafe iOS Demo/Pods-PactSafe iOS Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		9E57BDF67FC71AB0C576377D /* Pods-PactSafe iOS Demo-PactSafe iOS DemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PactSafe iOS Demo-PactSafe iOS DemoUITests.release.xcconfig"; path = "Target Support Files/Pods-PactSafe iOS Demo-PactSafe iOS DemoUITests/Pods-PactSafe iOS Demo-PactSafe iOS DemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42E65EBC233D0B8000B41888 /* BuildFile in Frameworks */,
+				61AF291F4CD6D86755BAAC10 /* Pods_PactSafe_iOS_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D2ABFA95A0DF70500CAB2E5 /* Pods_PactSafe_iOS_DemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +97,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				301296F72A838510DC64FEC8 /* Pods_PactSafe_iOS_Demo_PactSafe_iOS_DemoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		429A33C62358AA73007D7F99 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4206BAA6234E269300044421 /* HomeViewController.swift */,
+				426A19262350BADD00C10D5A /* LoginWithCheckboxViewController.swift */,
+				4206BAA4234E22F600044421 /* LoginViewController.swift */,
+				42E65E8D233D0B5A00B41888 /* SignUpViewController.swift */,
+				42751D72234E14AC00D20668 /* StartViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		42E65E7D233D0B5A00B41888 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +123,9 @@
 				42E65E9F233D0B5D00B41888 /* PactSafe iOS DemoTests */,
 				42E65EAA233D0B5D00B41888 /* PactSafe iOS DemoUITests */,
 				42E65E87233D0B5A00B41888 /* Products */,
+				42E65EB9233D0B7B00B41888 /* PactSafe */,
+				42E65EBA233D0B8000B41888 /* Frameworks */,
+				9DCDE0A3862CB9EF340A20BB /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,11 +144,12 @@
 			children = (
 				42E65E89233D0B5A00B41888 /* AppDelegate.swift */,
 				42E65E8B233D0B5A00B41888 /* SceneDelegate.swift */,
-				42E65E8D233D0B5A00B41888 /* ViewController.swift */,
+				429A33C62358AA73007D7F99 /* Controllers */,
 				42E65E8F233D0B5A00B41888 /* Main.storyboard */,
 				42E65E92233D0B5D00B41888 /* Assets.xcassets */,
 				42E65E94233D0B5D00B41888 /* LaunchScreen.storyboard */,
 				42E65E97233D0B5D00B41888 /* Info.plist */,
+				42751D74234E167E00D20668 /* GoogleService-Info.plist */,
 			);
 			path = "PactSafe iOS Demo";
 			sourceTree = "<group>";
@@ -128,6 +172,29 @@
 			path = "PactSafe iOS DemoUITests";
 			sourceTree = "<group>";
 		};
+		42E65EBA233D0B8000B41888 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74DDBECA33DE0D13DB3F00CF /* Pods_PactSafe_iOS_Demo.framework */,
+				0EBAF997F42E96E22D0089AD /* Pods_PactSafe_iOS_Demo_PactSafe_iOS_DemoUITests.framework */,
+				6FAD56E23474A27B0FD1F24B /* Pods_PactSafe_iOS_DemoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9DCDE0A3862CB9EF340A20BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9BE2E1D1AC541CE081B3DBEC /* Pods-PactSafe iOS Demo.debug.xcconfig */,
+				64AB8ECB482D9B62DF5D32BB /* Pods-PactSafe iOS Demo.release.xcconfig */,
+				48E4FBA76CEB87EEA3FB7B66 /* Pods-PactSafe iOS Demo-PactSafe iOS DemoUITests.debug.xcconfig */,
+				9E57BDF67FC71AB0C576377D /* Pods-PactSafe iOS Demo-PactSafe iOS DemoUITests.release.xcconfig */,
+				2E98F2F76102784C78B55569 /* Pods-PactSafe iOS DemoTests.debug.xcconfig */,
+				573867E1D5B6A5E170DB52DD /* Pods-PactSafe iOS DemoTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,15 +202,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42E65EB0233D0B5D00B41888 /* Build configuration list for PBXNativeTarget "PactSafe iOS Demo" */;
 			buildPhases = (
+				31FF78BE2424A95C8A3DFF20 /* [CP] Check Pods Manifest.lock */,
 				42E65E82233D0B5A00B41888 /* Sources */,
 				42E65E83233D0B5A00B41888 /* Frameworks */,
 				42E65E84233D0B5A00B41888 /* Resources */,
+				42AC98C387A6C0579E753431 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "PactSafe iOS Demo";
+			packageProductDependencies = (
+				42E65EBB233D0B8000B41888 /* SwiftPackageProductDependency */,
+			);
 			productName = "PactSafe iOS Demo";
 			productReference = 42E65E86233D0B5A00B41888 /* PactSafe iOS Demo.app */;
 			productType = "com.apple.product-type.application";
@@ -152,6 +224,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42E65EB3233D0B5D00B41888 /* Build configuration list for PBXNativeTarget "PactSafe iOS DemoTests" */;
 			buildPhases = (
+				716CACD132CA2362493F2782 /* [CP] Check Pods Manifest.lock */,
 				42E65E98233D0B5D00B41888 /* Sources */,
 				42E65E99233D0B5D00B41888 /* Frameworks */,
 				42E65E9A233D0B5D00B41888 /* Resources */,
@@ -170,9 +243,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42E65EB6233D0B5D00B41888 /* Build configuration list for PBXNativeTarget "PactSafe iOS DemoUITests" */;
 			buildPhases = (
+				4073B779CC6D084218D0C514 /* [CP] Check Pods Manifest.lock */,
 				42E65EA3233D0B5D00B41888 /* Sources */,
 				42E65EA4233D0B5D00B41888 /* Frameworks */,
 				42E65EA5233D0B5D00B41888 /* Resources */,
+				74CB0892659B21040076A040 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42E65E96233D0B5D00B41888 /* LaunchScreen.storyboard in Resources */,
+				42751D75234E167E00D20668 /* GoogleService-Info.plist in Resources */,
 				42E65E93233D0B5D00B41888 /* Assets.xcassets in Resources */,
 				42E65E91233D0B5A00B41888 /* Main.storyboard in Resources */,
 			);
@@ -254,14 +330,121 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		31FF78BE2424A95C8A3DFF20 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PactSafe iOS Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4073B779CC6D084218D0C514 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PactSafe iOS Demo-PactSafe iOS DemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		42AC98C387A6C0579E753431 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PactSafe iOS Demo/Pods-PactSafe iOS Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PactSafe iOS Demo/Pods-PactSafe iOS Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PactSafe iOS Demo/Pods-PactSafe iOS Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		716CACD132CA2362493F2782 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PactSafe iOS DemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74CB0892659B21040076A040 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PactSafe iOS Demo-PactSafe iOS DemoUITests/Pods-PactSafe iOS Demo-PactSafe iOS DemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PactSafe iOS Demo-PactSafe iOS DemoUITests/Pods-PactSafe iOS Demo-PactSafe iOS DemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PactSafe iOS Demo-PactSafe iOS DemoUITests/Pods-PactSafe iOS Demo-PactSafe iOS DemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		42E65E82233D0B5A00B41888 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42E65E8E233D0B5A00B41888 /* ViewController.swift in Sources */,
+				426A19272350BADD00C10D5A /* LoginWithCheckboxViewController.swift in Sources */,
+				42E65E8E233D0B5A00B41888 /* SignUpViewController.swift in Sources */,
+				42751D73234E14AC00D20668 /* StartViewController.swift in Sources */,
 				42E65E8A233D0B5A00B41888 /* AppDelegate.swift in Sources */,
+				4206BAA5234E22F600044421 /* LoginViewController.swift in Sources */,
 				42E65E8C233D0B5A00B41888 /* SceneDelegate.swift in Sources */,
+				4206BAA7234E269300044421 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,7 +555,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Debug;
 		};
@@ -432,6 +615,7 @@
 		};
 		42E65EB1233D0B5D00B41888 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BE2E1D1AC541CE081B3DBEC /* Pods-PactSafe iOS Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -441,7 +625,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "PactSafe.PactSafe-iOS-Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pactSafe.PactSafe-iOS-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -450,6 +634,7 @@
 		};
 		42E65EB2233D0B5D00B41888 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64AB8ECB482D9B62DF5D32BB /* Pods-PactSafe iOS Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -459,7 +644,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "PactSafe.PactSafe-iOS-Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pactSafe.PactSafe-iOS-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -468,6 +653,7 @@
 		};
 		42E65EB4233D0B5D00B41888 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E98F2F76102784C78B55569 /* Pods-PactSafe iOS DemoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +676,7 @@
 		};
 		42E65EB5233D0B5D00B41888 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 573867E1D5B6A5E170DB52DD /* Pods-PactSafe iOS DemoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +699,7 @@
 		};
 		42E65EB7233D0B5D00B41888 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48E4FBA76CEB87EEA3FB7B66 /* Pods-PactSafe iOS Demo-PactSafe iOS DemoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +720,7 @@
 		};
 		42E65EB8233D0B5D00B41888 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E57BDF67FC71AB0C576377D /* Pods-PactSafe iOS Demo-PactSafe iOS DemoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -590,6 +779,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		42E65EBB233D0B8000B41888 /* SwiftPackageProductDependency */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PactSafe;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 42E65E7E233D0B5A00B41888 /* Project object */;
 }

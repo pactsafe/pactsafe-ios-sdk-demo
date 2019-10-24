@@ -7,14 +7,25 @@
 //
 
 import UIKit
+import Firebase
+import PactSafe
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // Set authentication before use
+        PSApp.shared.authentication = PSAuthentication(accessToken: "***REMOVED***", siteAccessId: "***REMOVED***")
+        
+        // We're testing during development, so we'll set testMode to true. This should be removed before the app is ready for release.
+        PSApp.shared.testMode = true
+        
+        // Set debugMode to true for debugPrint statements when things aren't working correctly.
+        PSApp.shared.debugMode = true
+        
+        FirebaseApp.configure()
+        
         return true
     }
 

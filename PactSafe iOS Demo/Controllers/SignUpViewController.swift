@@ -19,28 +19,18 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var emailAdress: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var reenterPassword: UITextField!
-    @IBOutlet weak var submitButton: UIButton!
-    @IBOutlet weak var pactSafeClickWrap: PSClickWrap!
+    @IBOutlet weak var submitButton: PSSubmitButton!
+    @IBOutlet weak var pactSafeClickWrap: PSClickWrapView!
     
     // MARK: - Properties
+    
+    /// The shared instance of the PactSafe app.
     private let ps = PSApp.shared
 
     // MARK: -  Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         
-        // Configure your PactSafe Clickwrap
-        configurePSClickwrap()
-        
-        // Configure default button state (default is false)
-        configureSubmitButtonState()
-    }
-    
-    func configurePSClickwrap() {
         // Optionally use a UITextView Delegate to open linked contracts in SFSafariViewController
         pactSafeClickWrap.textView.delegate = self
         
@@ -52,20 +42,31 @@ class SignUpViewController: UIViewController {
             // If isChecked is true, enable submit button
             self.configureSubmitButtonState(isChecked)
         }
+        
+        submitButton.setBackgroundColor(UIColor.lightGray, for: .disabled)
+        
+        // Configure the default button state (default is false)
+        configureSubmitButtonState()
     }
     
-    func configureSubmitButtonState(_ state: Bool = false) {
-        // Disable submit button by default so we can ensure checkbox is selected
-        submitButton.isEnabled = state
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    private func configureSubmitButtonState(_ state: Bool = false) {
+        DispatchQueue.main.async {
+            // Disable submit button by default so we can ensure checkbox is selected
+            self.submitButton.isEnabled = state
+        }
     }
     
     @IBAction func submitForm(_ sender: UIButton) {
         // Check to make sure we can access text in input fields
-        guard let emailAddressText = emailAdress.text else { return }
-        guard let firstNameText = firstName.text else { return }
-        guard let lastNameText = lastName.text else { return }
-        guard let passwordText = password.text else { return }
-        guard let reenterPasswordText = reenterPassword.text else { return }
+        guard let emailAddressText = emailAdress.text,
+            let firstNameText = firstName.text,
+            let lastNameText = lastName.text,
+            let passwordText = password.text,
+            let reenterPasswordText = reenterPassword.text else { return }
         
         // Basic validation to ensure fields aren't empty
         if emailAddressText == "" {
@@ -91,12 +92,24 @@ class SignUpViewController: UIViewController {
         // Attempt to create a user with Firebase Auth
         Auth.auth().createUser(withEmail: emailAddressText, password: passwordText) { (result, error) in
             if error == nil {
-                // Use PSCustomData to send additional data about the activty
+                // Use PSCustomData to send additional data about the activity
                 var customData = PSCustomData()
-                customData.first_name = firstNameText
-                customData.last_name = lastNameText
-               
-                self.sendToPactSafe(signerId: emailAddressText, customData: customData)
+                customData.firstName = firstNameText
+                customData.lastName = lastNameText
+                
+                // Create the signer with the specified id and custom data.
+                let signer = PSSigner(signerId: emailAddressText, customData: customData)
+                
+                // Use the sendAgreed method on the clickwrap to send acceptance.
+                self.pactSafeClickWrap.sendAgreed(signer: signer) { (error) in
+                    DispatchQueue.main.async {
+                        if error == nil {
+                            self.performSegue(withIdentifier: "signUpToHomeSegue", sender: self)
+                        } else {
+                            self.formAlert("\(String(describing: error))")
+                        }
+                    }
+                }
             } else {
                 DispatchQueue.main.async {
                      self.formAlert(error?.localizedDescription ?? "We hit a snag :(. Please try again.")
@@ -104,30 +117,17 @@ class SignUpViewController: UIViewController {
             }
         }
     }
-    
-    func sendToPactSafe(signerId: String, customData: PSCustomData?) {
-        // PSClickWrap contains sendAgreed method to easily send acceptance
-        // If additional functionality is needed, utilize the sendActivity method in PSApp
-        self.pactSafeClickWrap.sendAgreed(signerId: signerId, customData: customData) { (data, response, error) in
-            if error == nil {
-                DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: "signUpToHomeSegue", sender: self)
-                }
-            } else {
-                DispatchQueue.main.async {
-                    self.formAlert("\(String(describing: error))")
-                }
-            }
-        }
-    }
+
 }
 
 
 // MARK: - Make link clicks open in SFSafariViewController
 extension SignUpViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
-        let safariVc = SFSafariViewController(url: URL)
-        present(safariVc, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            let safariVc = SFSafariViewController(url: URL)
+            self.present(safariVc, animated: true, completion: nil)
+        }
         return false
     }
 }
@@ -135,11 +135,13 @@ extension SignUpViewController: UITextViewDelegate {
 // MARK: - Alert Handling
 extension SignUpViewController {
     private func formAlert(_ errorMessage: String) {
-        let alert = basicAlert("Error", message: errorMessage)
-        present(alert, animated: true)
+        DispatchQueue.main.async {
+            let alert = self.basicAlert("Error", message: errorMessage)
+            self.present(alert, animated: true)
+        }
     }
     
-    func basicAlert(_ title: String, message: String) -> UIAlertController {
+    private func basicAlert(_ title: String, message: String) -> UIAlertController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alertController.addAction(action)

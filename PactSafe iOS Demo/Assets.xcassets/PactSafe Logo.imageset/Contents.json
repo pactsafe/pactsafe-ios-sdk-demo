@@ -2,17 +2,15 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "PactSafe Logo.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "PactSafe Logo@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "PactSafe Logo@3x.png",
+      "filename" : "PS_Logo_Blue.pdf",
       "scale" : "3x"
     }
   ],

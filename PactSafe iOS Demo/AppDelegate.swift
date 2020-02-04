@@ -12,35 +12,25 @@ import PactSafe
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        // Set authentication before use
-        PSApp.shared.authentication = PSAuthentication(accessToken: "~sHtD6bwo-2swyx3nhJh2P5SflZHRF~lwJlzASO10mo_", siteAccessId: "790d7014-9806-4acc-8b8a-30c4987f3a95")
+        PSApp.shared.configure(siteAccessId: "790d7014-9806-4acc-8b8a-30c4987f3a95")
         
+        PSApp.shared.preload(withGroupKey: "example-mobile-app-group")
+        
+        #if DEBUG
         // We're testing during development, so we'll set testMode to true. This should be removed before the app is ready for release.
         PSApp.shared.testMode = true
         
         // Set debugMode to true for debugPrint statements when things aren't working correctly.
         PSApp.shared.debugMode = true
+        #endif
         
         FirebaseApp.configure()
         
         return true
-    }
-
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-    }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
 

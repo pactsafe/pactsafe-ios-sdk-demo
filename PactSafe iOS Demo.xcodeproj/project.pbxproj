@@ -13,6 +13,7 @@
 		426A19272350BADD00C10D5A /* LoginWithCheckboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426A19262350BADD00C10D5A /* LoginWithCheckboxViewController.swift */; };
 		42751D73234E14AC00D20668 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42751D72234E14AC00D20668 /* StartViewController.swift */; };
 		42751D75234E167E00D20668 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42751D74234E167E00D20668 /* GoogleService-Info.plist */; };
+		42D2336823E9F7C400BD0AE4 /* SignUpProgrammaticallyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D2336723E9F7C400BD0AE4 /* SignUpProgrammaticallyViewController.swift */; };
 		42E65E8A233D0B5A00B41888 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E65E89233D0B5A00B41888 /* AppDelegate.swift */; };
 		42E65E8C233D0B5A00B41888 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E65E8B233D0B5A00B41888 /* SceneDelegate.swift */; };
 		42E65E8E233D0B5A00B41888 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E65E8D233D0B5A00B41888 /* SignUpViewController.swift */; };
@@ -21,7 +22,7 @@
 		42E65E96233D0B5D00B41888 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42E65E94233D0B5D00B41888 /* LaunchScreen.storyboard */; };
 		42E65EA1233D0B5D00B41888 /* PactSafe_iOS_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E65EA0233D0B5D00B41888 /* PactSafe_iOS_DemoTests.swift */; };
 		42E65EAC233D0B5D00B41888 /* PactSafe_iOS_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E65EAB233D0B5D00B41888 /* PactSafe_iOS_DemoUITests.swift */; };
-		42E65EBC233D0B8000B41888 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 42E65EBB233D0B8000B41888 /* SwiftPackageProductDependency */; };
+		42E65EBC233D0B8000B41888 /* PactSafe in Frameworks */ = {isa = PBXBuildFile; productRef = 42E65EBB233D0B8000B41888 /* PactSafe */; };
 		61AF291F4CD6D86755BAAC10 /* Pods_PactSafe_iOS_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DDBECA33DE0D13DB3F00CF /* Pods_PactSafe_iOS_Demo.framework */; };
 		6D2ABFA95A0DF70500CAB2E5 /* Pods_PactSafe_iOS_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FAD56E23474A27B0FD1F24B /* Pods_PactSafe_iOS_DemoTests.framework */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 		426A19262350BADD00C10D5A /* LoginWithCheckboxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithCheckboxViewController.swift; sourceTree = "<group>"; };
 		42751D72234E14AC00D20668 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		42751D74234E167E00D20668 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		42D2336723E9F7C400BD0AE4 /* SignUpProgrammaticallyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpProgrammaticallyViewController.swift; sourceTree = "<group>"; };
 		42E65E86233D0B5A00B41888 /* PactSafe iOS Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PactSafe iOS Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E65E89233D0B5A00B41888 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42E65E8B233D0B5A00B41888 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42E65EBC233D0B8000B41888 /* BuildFile in Frameworks */,
+				42E65EBC233D0B8000B41888 /* PactSafe in Frameworks */,
 				61AF291F4CD6D86755BAAC10 /* Pods_PactSafe_iOS_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,6 +113,7 @@
 				426A19262350BADD00C10D5A /* LoginWithCheckboxViewController.swift */,
 				4206BAA4234E22F600044421 /* LoginViewController.swift */,
 				42E65E8D233D0B5A00B41888 /* SignUpViewController.swift */,
+				42D2336723E9F7C400BD0AE4 /* SignUpProgrammaticallyViewController.swift */,
 				42751D72234E14AC00D20668 /* StartViewController.swift */,
 			);
 			path = Controllers;
@@ -214,7 +217,7 @@
 			);
 			name = "PactSafe iOS Demo";
 			packageProductDependencies = (
-				42E65EBB233D0B8000B41888 /* SwiftPackageProductDependency */,
+				42E65EBB233D0B8000B41888 /* PactSafe */,
 			);
 			productName = "PactSafe iOS Demo";
 			productReference = 42E65E86233D0B5A00B41888 /* PactSafe iOS Demo.app */;
@@ -440,6 +443,7 @@
 			files = (
 				426A19272350BADD00C10D5A /* LoginWithCheckboxViewController.swift in Sources */,
 				42E65E8E233D0B5A00B41888 /* SignUpViewController.swift in Sources */,
+				42D2336823E9F7C400BD0AE4 /* SignUpProgrammaticallyViewController.swift in Sources */,
 				42751D73234E14AC00D20668 /* StartViewController.swift in Sources */,
 				42E65E8A233D0B5A00B41888 /* AppDelegate.swift in Sources */,
 				4206BAA5234E22F600044421 /* LoginViewController.swift in Sources */,
@@ -781,7 +785,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		42E65EBB233D0B8000B41888 /* SwiftPackageProductDependency */ = {
+		42E65EBB233D0B8000B41888 /* PactSafe */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PactSafe;
 		};

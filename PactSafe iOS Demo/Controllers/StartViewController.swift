@@ -14,8 +14,6 @@ class StartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,6 +27,11 @@ class StartViewController: UIViewController {
     @IBAction func signUpButton(_ sender: UIButton) {
         self.performSegue(withIdentifier: "startToRegisterSegue", sender: self)
     }
+    
+    @IBAction func signUpProgrammaticButton(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "startToRegisterProgrammaticSegue", sender: self)
+    }
+    
     
     @IBAction func loginButton(_ sender: UIButton) {
         self.performSegue(withIdentifier: "startToLoginSegue", sender: self)

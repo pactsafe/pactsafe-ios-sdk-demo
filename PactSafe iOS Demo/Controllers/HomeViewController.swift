@@ -13,7 +13,6 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     @IBAction func logout(_ sender: UIButton) {
@@ -22,7 +21,9 @@ class HomeViewController: UIViewController {
         } catch let error as NSError {
             print("Error signing out: \(error)")
         }
-        self.navigationController?.popToRootViewController(animated: true)
+        DispatchQueue.main.async {
+            self.navigationController?.popToRootViewController(animated: true)
+        }
     }
 
 }

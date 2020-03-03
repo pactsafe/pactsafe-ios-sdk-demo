@@ -15,102 +15,46 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailAddress: UITextField!
     @IBOutlet weak var password: UITextField!
     
-    let ps = PSApp.shared
-    private var psSignerId: String?
+    /// Access the PactSafe shared instance.
+    private let ps = PSApp.shared
+    
+    /// The PactSafe group key used for checking acceptance status.
     private let groupKey: String = "example-mobile-app-group"
+    
+    /// Hold a reference of the signer ID for later usage.
+    private var psSignerId: PSSigner?
+    private var psGroupData: PSGroup?
+    
+    private var contractIds: [String]?
+    private var contractVersions: [String]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-//    // Check acceptance status after user logs in
-//    func checkLastContracts(_ signerId: String,
-//                            completion: @escaping(_ needsAcceptance: Bool, _ contractIds: [Int]) -> Void) {
-//
-//        ps.getLatestSigned(forSignerId: signerId, inGroupKey: "example-mobile-app-group", nil) { (result) in
-//            // TODO: Error handling
-//            guard let result = result else { return }
-//            var contractHasMajorUpdate: Bool = false
-//            var contractIdsThatNeedUpdate: [Int] = []
-//            for (key, value) in result {
-//                if !value {
-//                    contractHasMajorUpdate = true
-//                    if let keyAsInt = Int(key) {
-//                        contractIdsThatNeedUpdate.append(keyAsInt)
-//                    }
-//                }
-//            }
-//            completion(contractHasMajorUpdate, contractIdsThatNeedUpdate)
-//        }
-//    }
-    
-    @IBAction func submit(_ sender: UIButton) {
+    private func sendAcceptance(for signerId: String) {
+        var customData = PSCustomData()
+        customData.companyName = "My Company"
+        let signer = PSSigner(signerId: signerId, customData: customData)
         
-        guard let emailAddressText = emailAddress.text else { return }
-        guard let passwordText = password.text else { return }
+        guard let groupData = psGroupData else { return }
         
-        if emailAddressText == "" {
-            let alert = basicAlert("Error", message: "Missing Email Address. Please try again.")
-            self.present(alert, animated: true, completion: nil)
-        } else if passwordText == "" {
-            let alert = basicAlert("Error", message: "Missing Password. Please try again.")
-            self.present(alert, animated: true, completion: nil)
-        }
-        
-        ps.getSignedStatus(for: emailAddressText, in: groupKey) { (needsAcceptance, contractIds) in
-            if needsAcceptance {
-                guard let contractIds = contractIds else { return }
-                self.ps.getContractsDetails(withContractIds: contractIds) { (contracts, error) in
-                    var updatedContractMessage = "We've updated the following: "
-                    for contract in contracts {
-                        guard let contract = contract else { return }
-                        let contractTitle = contract.publishedVersion.title
-                        updatedContractMessage.append(contractTitle + " ")
-                    }
-                    updatedContractMessage.append("\n \n Please agree to these changes.")
-                    DispatchQueue.main.async {
-                        let alert = self.updatedTermsAlert("Updated Terms", message: updatedContractMessage, email: emailAddressText, password: passwordText)
-                        self.present(alert, animated: true, completion: nil)
-                    }
-                }
-            } else {
-                DispatchQueue.main.async {
-                    self.segueToHome()
-                }
+        ps.sendActivity(.agreed, signer: signer, group: groupData) { (error) in
+            if error != nil {
+                print("Error sending acceptance")
             }
         }
-        
-//        // Check to see if contracts have received major revisions and determine if they need acceptance
-//        self.checkLastContracts(emailAddressText) { (needsUpdate, contractIds) in
-//
-//            if needsUpdate {
-//                self.ps.getContractsDetails(withContractIds: contractIds) { (contracts, error) in
-//                    var updatedContractMessage = "We've updated the following: "
-//                    for contract in contracts {
-//                        guard let contract = contract else { return }
-//                        let contractTitle = contract.publishedVersion.title
-//                        updatedContractMessage.append(contractTitle + " ")
-//                    }
-//                    updatedContractMessage.append("\n \n Please agree to these changes.")
-//                    DispatchQueue.main.async {
-//                        let alert = self.updatedTermsAlert("Updated Terms", message: updatedContractMessage, email: emailAddressText, password: passwordText)
-//                        self.present(alert, animated: true, completion: nil)
-//                    }
-//                }
-//            } else {
-//                self.segueToHome()
-//            }
-//        }
     }
     
-    func updatedTermsAlert(_ title: String, message: String, email: String, password: String) -> UIAlertController {
+    private func updatedTermsAlert(_ title: String, message: String, email: String, password: String) -> UIAlertController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         let acceptAction = UIAlertAction(title: "Agreed", style: .default) { (alertAction) in
+            self.sendAcceptance(for: email)
             self.loginUser(email, password)
         }
         
-        let noAction = UIAlertAction(title: " Disagree", style: .destructive) { (alertAction) in
+        let noAction = UIAlertAction(title: "Disagree", style: .destructive) { (alertAction) in
             self.dismiss(animated: true, completion: nil)
         }
         
@@ -124,13 +68,13 @@ class LoginViewController: UIViewController {
         return alertController
     }
     
-    func segueToHome() {
+    private func segueToHome() {
         DispatchQueue.main.async {
             self.performSegue(withIdentifier: "loginToHomeSegue", sender: self)
         }
     }
     
-    func loginUser(_ email: String, _ password: String) {
+    private func loginUser(_ email: String, _ password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             // Authentication succeeded
             if error == nil {
@@ -141,9 +85,72 @@ class LoginViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func submit(_ sender: UIButton) {
+        
+        guard let signerId = emailAddress.text, let passwordText = password.text else { return }
+        
+        if signerId == "" {
+            let alert = basicAlert("Error", message: "Missing Email Address. Please try again.")
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        if passwordText == "" {
+            let alert = basicAlert("Error", message: "Missing Password. Please try again.")
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        /// Check the status of the specified signer ID within a PactSafe group.
+        ps.signedStatus(for: signerId, groupKey: groupKey) { (needsAcceptance, contractIds) in
+            if needsAcceptance {
+                self.showContractUpdates(forSignerId: signerId,
+                                         password: passwordText,
+                                         filterContractIds: contractIds)
+            } else {
+                DispatchQueue.main.async {
+                    self.segueToHome()
+                }
+            }
+        }
+    }
+    
+    private func showContractUpdates(forSignerId signerId: String,
+                                     password passwordText: String,
+                                     filterContractIds: [String]? = nil) {
+        
+        self.ps.loadGroup(groupKey: self.groupKey) { (groupData, error) in
+            guard let groupData = groupData, let contractsData = groupData.contractData else { return }
+            self.psGroupData = groupData
+            
+            var titlesOfContracts = [String]()
+            
+            var updatedContractsMessage: String = "We've updated the following: "
+            
+            if let cidsFilter = filterContractIds {
+                contractsData.forEach { (key, value) in
+                    if cidsFilter.contains(key) { titlesOfContracts.append(value.title) }
+                }
+            } else {
+                contractsData.forEach { (key, value) in
+                    titlesOfContracts.append(value.title)
+                }
+            }
+            
+            let contractTitles = titlesOfContracts.map { String($0) }.joined(separator: " and ")
+            updatedContractsMessage.append(contractTitles)
+            updatedContractsMessage.append(".\n \n Please agree to these changes.")
+            
+            DispatchQueue.main.async {
+                let alert = self.updatedTermsAlert("Updated Terms", message: updatedContractsMessage, email: signerId, password: passwordText)
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+    }
 }
 
+/// Validation and alerts.
 extension LoginViewController {
+    
     func basicAlert(_ title: String, message: String) -> UIAlertController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         return alertController

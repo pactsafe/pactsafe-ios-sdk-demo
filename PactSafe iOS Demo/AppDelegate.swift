@@ -12,35 +12,40 @@ import PactSafe
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
+    // Example getting values from PLIST file. There are better ways of doing this.
+    var psSiteAccessId: String?
+    var psGroupKey: String?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        // Set authentication before use
-        PSApp.shared.authentication = PSAuthentication(accessToken: "***REMOVED***", siteAccessId: "***REMOVED***")
+        // Get your PactSafe Site Access ID.
+        // For demo purposes only and production implementations will likely look different.
+        var nsDictionary: NSDictionary?
+        // Change PLIST file name if you'd like to use the configuration here.
+        if let path = Bundle.main.path(forResource: "PactSafe-Configuration", ofType: "plist") {
+            nsDictionary = NSDictionary(contentsOfFile: path)
+            psSiteAccessId = nsDictionary?.value(forKey: "PACTSAFE_ACCESS_ID") as? String
+            psGroupKey = nsDictionary?.value(forKey: "PACTSAFE_GROUP_KEY") as? String
+        }
         
+        // Please avoid force unwrapping in production, this is only for
+        // demo purposes and to avoid additional boilderplace code :)
+        PSApp.shared.configure(siteAccessId: psSiteAccessId!)
+        
+        PSApp.shared.preload(withGroupKey: psGroupKey!)
+        
+        #if DEBUG
         // We're testing during development, so we'll set testMode to true. This should be removed before the app is ready for release.
         PSApp.shared.testMode = true
         
         // Set debugMode to true for debugPrint statements when things aren't working correctly.
         PSApp.shared.debugMode = true
+        #endif
         
         FirebaseApp.configure()
         
         return true
-    }
-
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-    }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
 

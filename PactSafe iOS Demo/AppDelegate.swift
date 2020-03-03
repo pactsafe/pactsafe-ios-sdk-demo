@@ -13,12 +13,27 @@ import PactSafe
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-
+    // Example getting values from PLIST file. There are better ways of doing this.
+    var psSiteAccessId: String?
+    var psGroupKey: String?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        PSApp.shared.configure(siteAccessId: "790d7014-9806-4acc-8b8a-30c4987f3a95")
+        // Get your PactSafe Site Access ID.
+        // For demo purposes only and production implementations will likely look different.
+        var nsDictionary: NSDictionary?
+        // Change PLIST file name if you'd like to use the configuration here.
+        if let path = Bundle.main.path(forResource: "PactSafe-Configuration", ofType: "plist") {
+            nsDictionary = NSDictionary(contentsOfFile: path)
+            psSiteAccessId = nsDictionary?.value(forKey: "PACTSAFE_ACCESS_ID") as? String
+            psGroupKey = nsDictionary?.value(forKey: "PACTSAFE_GROUP_KEY") as? String
+        }
         
-        PSApp.shared.preload(withGroupKey: "example-mobile-app-group")
+        // Please avoid force unwrapping in production, this is only for
+        // demo purposes and to avoid additional boilderplace code :)
+        PSApp.shared.configure(siteAccessId: psSiteAccessId!)
+        
+        PSApp.shared.preload(withGroupKey: psGroupKey!)
         
         #if DEBUG
         // We're testing during development, so we'll set testMode to true. This should be removed before the app is ready for release.

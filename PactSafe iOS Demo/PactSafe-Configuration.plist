@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   pactsafe-configuration.plist
-   PactSafe iOS Demo
-
-   Created by Tim Morse on 3/3/20.
-   Copyright (c) 2020 Tim Morse . All rights reserved.
--->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-    
-    </dict>
+<dict>
+	<key>PACTSAFE_ACCESS_ID</key>
+	<string>790d7014-9806-4acc-8b8a-30c4987f3a95</string>
+	<key>PACTSAFE_GROUP_KEY</key>
+	<string>example-web-group-checkbox-style</string>
+</dict>
 </plist>

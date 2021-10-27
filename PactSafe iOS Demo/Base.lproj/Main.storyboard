@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bg0-0e-vA7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bg0-0e-vA7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,7 +25,7 @@
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0V6-Rk-ad2">
                                                 <rect key="frame" x="24" y="32" width="366" height="44"/>
-                                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="Z9o-6f-LGW"/>
                                                 </constraints>
@@ -32,14 +34,14 @@
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8uv-wA-0NV">
                                                 <rect key="frame" x="24" y="152" width="366" height="44"/>
-                                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="5HP-QX-NE4"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="email"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNf-Cy-Rgv" customClass="PSSubmitButton" customModule="PactSafe">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNf-Cy-Rgv" customClass="PSSubmitButton" customModule="PactSafe">
                                                 <rect key="frame" x="24" y="415.5" width="366" height="50"/>
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -58,7 +60,7 @@
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YKA-dA-XlI">
                                                 <rect key="frame" x="24" y="92" width="366" height="44"/>
-                                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="T40-fu-IYo"/>
                                                 </constraints>
@@ -67,11 +69,11 @@
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JyQ-1C-BiP" userLabel="PactSafe Click Wrap" customClass="PSClickWrapView" customModule="PactSafe">
                                                 <rect key="frame" x="24" y="332" width="366" height="67.5"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2oW-Rx-7wx">
                                                 <rect key="frame" x="24" y="212" width="366" height="44"/>
-                                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="4ax-6o-y0U"/>
                                                 </constraints>
@@ -80,7 +82,7 @@
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Gn-F2-xMd">
                                                 <rect key="frame" x="24" y="272" width="366" height="44"/>
-                                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="h1c-ug-4AM"/>
                                                 </constraints>
@@ -88,7 +90,7 @@
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="HNf-Cy-Rgv" firstAttribute="top" secondItem="SM1-5w-UA8" secondAttribute="top" constant="415.5" id="1Lq-Wr-7Ut"/>
                                             <constraint firstItem="8uv-wA-0NV" firstAttribute="leading" secondItem="SM1-5w-UA8" secondAttribute="leading" constant="24" id="3xL-7D-Mnb"/>
@@ -125,7 +127,8 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="RPb-TF-7KN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0Ax-Ue-aK1"/>
                             <constraint firstItem="RPb-TF-7KN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5g5-i4-fmA"/>
@@ -133,7 +136,6 @@
                             <constraint firstItem="SM1-5w-UA8" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="brl-Gs-Tjj"/>
                             <constraint firstItem="RPb-TF-7KN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="phM-vG-08I"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create an Account" largeTitleDisplayMode="always" id="WW1-k2-HiU"/>
                     <connections>
@@ -164,7 +166,7 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UTC-nQ-bfH">
                                         <rect key="frame" x="16" y="136" width="382" height="44"/>
-                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="hfw-5X-f8V"/>
                                         </constraints>
@@ -173,7 +175,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8cU-nR-WfZ">
                                         <rect key="frame" x="16" y="76" width="382" height="44"/>
-                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="gfe-XC-lzn"/>
                                         </constraints>
@@ -182,7 +184,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="htJ-sq-cWt">
                                         <rect key="frame" x="16" y="196" width="382" height="44"/>
-                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="OM1-oO-n0j"/>
                                         </constraints>
@@ -191,7 +193,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1WH-ea-cXr">
                                         <rect key="frame" x="16" y="256" width="382" height="44"/>
-                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="vnr-a7-dhA"/>
                                         </constraints>
@@ -200,7 +202,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zfO-f8-9AG">
                                         <rect key="frame" x="16" y="16" width="382" height="44"/>
-                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="OII-4e-K8t"/>
                                         </constraints>
@@ -208,7 +210,7 @@
                                         <textInputTraits key="textInputTraits" textContentType="name"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="1WH-ea-cXr" secondAttribute="trailing" constant="16" id="Axv-0o-Ybi"/>
                                     <constraint firstItem="zfO-f8-9AG" firstAttribute="leading" secondItem="2AM-kA-Kba" secondAttribute="leading" constant="16" id="D4l-py-6nD"/>
@@ -228,7 +230,7 @@
                                     <constraint firstAttribute="bottom" secondItem="1WH-ea-cXr" secondAttribute="bottom" constant="16" id="x9j-3M-kRZ"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mx2-yG-4MY" customClass="PSSubmitButton" customModule="PactSafe">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mx2-yG-4MY" customClass="PSSubmitButton" customModule="PactSafe">
                                 <rect key="frame" x="16" y="420" width="382" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -246,7 +248,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Wmf-cZ-xrD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="2AM-kA-Kba" firstAttribute="top" secondItem="Wmf-cZ-xrD" secondAttribute="top" id="OD6-q2-Txe"/>
                             <constraint firstItem="2AM-kA-Kba" firstAttribute="trailing" secondItem="Wmf-cZ-xrD" secondAttribute="trailing" id="TFR-gk-1Ts"/>
@@ -255,7 +258,6 @@
                             <constraint firstItem="Mx2-yG-4MY" firstAttribute="top" secondItem="2AM-kA-Kba" secondAttribute="bottom" constant="16" id="xPH-df-cbi"/>
                             <constraint firstItem="Wmf-cZ-xrD" firstAttribute="trailing" secondItem="Mx2-yG-4MY" secondAttribute="trailing" constant="16" id="zQI-n8-Y7w"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Wmf-cZ-xrD"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create an Account" id="BV1-de-10U"/>
                     <connections>
@@ -298,7 +300,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvP-L0-8bZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvP-L0-8bZ">
                                 <rect key="frame" x="132" y="490.5" width="150" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="09s-JS-kEv"/>
@@ -310,7 +312,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ddv-2p-5vD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="rvP-L0-8bZ" firstAttribute="centerX" secondItem="VWG-Cq-ypq" secondAttribute="centerX" id="5zP-v9-yQO"/>
                             <constraint firstItem="rvP-L0-8bZ" firstAttribute="top" secondItem="tlJ-9H-Q0M" secondAttribute="bottom" constant="32" id="QOx-cf-gmH"/>
@@ -318,7 +321,6 @@
                             <constraint firstItem="ddv-2p-5vD" firstAttribute="trailing" secondItem="tlJ-9H-Q0M" secondAttribute="trailing" id="mS8-6e-Bh5"/>
                             <constraint firstItem="tlJ-9H-Q0M" firstAttribute="leading" secondItem="ddv-2p-5vD" secondAttribute="leading" id="r1E-Uo-lBp"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="ddv-2p-5vD"/>
                     </view>
                     <navigationItem key="navigationItem" id="LGe-DX-HBI"/>
                 </viewController>
@@ -337,9 +339,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OvA-u5-oFW">
                                 <rect key="frame" x="32" y="292" width="350" height="312"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSA-MO-n1M">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSA-MO-n1M">
                                         <rect key="frame" x="16" y="32" width="318" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="hNP-Fg-vVi"/>
                                         </constraints>
@@ -351,7 +353,7 @@
                                             <action selector="signUpButton:" destination="jvT-Ea-zBD" eventType="touchUpInside" id="7Th-Gv-CnP"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TaZ-9u-dgY">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TaZ-9u-dgY">
                                         <rect key="frame" x="16" y="164" width="318" height="50"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -365,9 +367,9 @@
                                             <action selector="loginButton:" destination="jvT-Ea-zBD" eventType="touchUpInside" id="Db8-vk-4MT"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59x-4g-3YJ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59x-4g-3YJ">
                                         <rect key="frame" x="16" y="230" width="318" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="7JQ-rI-M0r"/>
                                         </constraints>
@@ -379,9 +381,9 @@
                                             <action selector="loginWithCheckboxButton:" destination="jvT-Ea-zBD" eventType="touchUpInside" id="jx8-a1-47k"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gz9-xI-3Hv">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gz9-xI-3Hv">
                                         <rect key="frame" x="16" y="98" width="318" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="kQC-zV-QIK"/>
                                         </constraints>
@@ -394,7 +396,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="gz9-xI-3Hv" firstAttribute="leading" secondItem="OvA-u5-oFW" secondAttribute="leading" constant="16" id="5xW-I0-EV2"/>
                                     <constraint firstAttribute="width" constant="350" id="8qN-0t-WII"/>
@@ -412,7 +414,7 @@
                                     <constraint firstAttribute="trailing" secondItem="TaZ-9u-dgY" secondAttribute="trailing" constant="16" id="vh9-9e-tRS"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PactSafe Logo" translatesAutoresizingMaskIntoConstraints="NO" id="MCv-5G-Qic">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ironclad Logo" translatesAutoresizingMaskIntoConstraints="NO" id="MCv-5G-Qic">
                                 <rect key="frame" x="112" y="193" width="190" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="aHd-jC-zqe"/>
@@ -420,14 +422,14 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="w75-oL-TCb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="OvA-u5-oFW" firstAttribute="centerY" secondItem="qnm-eQ-L85" secondAttribute="centerY" id="287-qp-iXM"/>
                             <constraint firstItem="OvA-u5-oFW" firstAttribute="top" secondItem="MCv-5G-Qic" secondAttribute="bottom" constant="24" id="QOY-ZG-ISy"/>
                             <constraint firstItem="OvA-u5-oFW" firstAttribute="centerX" secondItem="qnm-eQ-L85" secondAttribute="centerX" id="YeF-TB-ckV"/>
                             <constraint firstItem="MCv-5G-Qic" firstAttribute="centerX" secondItem="qnm-eQ-L85" secondAttribute="centerX" id="hXU-UU-HTc"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="w75-oL-TCb"/>
                     </view>
                     <navigationItem key="navigationItem" id="0lm-GM-IQF"/>
                     <connections>
@@ -452,7 +454,7 @@
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uue-wu-ewU">
                                 <rect key="frame" x="24" y="120" width="366" height="44"/>
-                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="8uN-xd-7qC"/>
                                 </constraints>
@@ -461,14 +463,14 @@
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cOO-rQ-4Fp">
                                 <rect key="frame" x="24" y="180" width="366" height="44"/>
-                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="dpf-5v-1xA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZ5-xf-4Il">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZ5-xf-4Il">
                                 <rect key="frame" x="24" y="240" width="366" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -486,7 +488,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Ngw-jv-NkR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="DZ5-xf-4Il" firstAttribute="centerX" secondItem="HKm-zu-ecl" secondAttribute="centerX" id="0aA-OR-Vos"/>
                             <constraint firstItem="cOO-rQ-4Fp" firstAttribute="leading" secondItem="Ngw-jv-NkR" secondAttribute="leading" constant="24" id="38S-Hc-kAU"/>
@@ -499,7 +502,6 @@
                             <constraint firstItem="DZ5-xf-4Il" firstAttribute="top" secondItem="cOO-rQ-4Fp" secondAttribute="bottom" constant="16" id="YLV-cd-Lkw"/>
                             <constraint firstItem="cOO-rQ-4Fp" firstAttribute="top" secondItem="uue-wu-ewU" secondAttribute="bottom" constant="16" id="ltI-FK-5Ys"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Ngw-jv-NkR"/>
                     </view>
                     <navigationItem key="navigationItem" title="Login w/ Alert" id="tVU-cf-m6A"/>
                     <connections>
@@ -522,7 +524,7 @@
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gOS-Z3-r25">
                                 <rect key="frame" x="24" y="120" width="366" height="44"/>
-                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="KaN-FO-JvY"/>
                                 </constraints>
@@ -531,14 +533,14 @@
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XZt-SZ-QER">
                                 <rect key="frame" x="24" y="180" width="366" height="44"/>
-                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="hYW-rK-Cf4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hP-lE-bMS">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hP-lE-bMS">
                                 <rect key="frame" x="24" y="240" width="366" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -553,7 +555,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="IHM-MH-HlG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="gOS-Z3-r25" secondAttribute="trailing" constant="24" id="9Ck-fm-rWf"/>
                             <constraint firstItem="XZt-SZ-QER" firstAttribute="leading" secondItem="IHM-MH-HlG" secondAttribute="leading" constant="24" id="ITM-jH-QWE"/>
@@ -566,7 +569,6 @@
                             <constraint firstItem="XZt-SZ-QER" firstAttribute="top" secondItem="gOS-Z3-r25" secondAttribute="bottom" constant="16" id="kVv-Yz-U1Q"/>
                             <constraint firstItem="3hP-lE-bMS" firstAttribute="centerX" secondItem="0bj-PF-b66" secondAttribute="centerX" id="qCK-28-dM1"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="IHM-MH-HlG"/>
                     </view>
                     <navigationItem key="navigationItem" title="Login w/ Checkbox" id="1Dj-RB-DAk"/>
                     <connections>
@@ -580,10 +582,25 @@
             <point key="canvasLocation" x="3523" y="1148"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="PactSafe Logo" width="1755" height="318"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="KDm-d7-5v7"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="Ironclad Logo" width="1389.3333740234375" height="263.33334350585938"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

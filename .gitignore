@@ -88,3 +88,5 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+PactSafe iOS Demo/PactSafe-Configuration.plist
+GoogleService-Info.plist

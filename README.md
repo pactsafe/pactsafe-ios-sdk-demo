@@ -1,11 +1,7 @@
-# Pactsafe iOS Demo App
-
-
+# Ironclad Embedded Clickwrap iOS Demo App
 
 ## Getting Started
-
 - Clone the repository
-- Run pod update (uses Cocoapods for Firebase authentication)
-- Open `PactSafe iOS Demo.xcworkspace` file
+- Open `PactSafe iOS Demo.xcodeproj` file
 - Add [PactSafe iOS SDK](https://github.com/pactsafe/pactsafe-ios-sdk) to your demo app
 

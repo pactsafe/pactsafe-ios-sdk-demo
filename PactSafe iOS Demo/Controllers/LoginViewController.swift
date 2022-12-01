@@ -6,7 +6,6 @@
 //  Copyright © 2019 Tim Morse . All rights reserved.
 //
 
-import FirebaseAuth
 import PactSafe
 import UIKit
 
@@ -74,15 +73,7 @@ class LoginViewController: UIViewController {
   }
 
   private func loginUser(_ email: String, _ password: String) {
-    Auth.auth().signIn(withEmail: email, password: password) { _, error in
-      // Authentication succeeded
-      if error == nil {
-        self.segueToHome()
-      } else {
-        let alert = self.errorAlert("Error", message: error?.localizedDescription ?? "Something went wrong logging in. Try Again.")
-        self.present(alert, animated: true, completion: nil)
-      }
-    }
+    self.segueToHome()
   }
 
   @IBAction func submit(_ sender: UIButton) {

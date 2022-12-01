@@ -13,9 +13,7 @@
 		42751D73234E14AC00D20668 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42751D72234E14AC00D20668 /* StartViewController.swift */; };
 		42D2336823E9F7C400BD0AE4 /* SignUpProgrammaticallyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D2336723E9F7C400BD0AE4 /* SignUpProgrammaticallyViewController.swift */; };
 		42DE69082728FFF2003F3DB8 /* PactSafe in Frameworks */ = {isa = PBXBuildFile; productRef = 42DE69072728FFF2003F3DB8 /* PactSafe */; };
-		42DE690A27290040003F3DB8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42DE690927290040003F3DB8 /* GoogleService-Info.plist */; };
 		42DE690C27290229003F3DB8 /* PactSafe-Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42DE690B27290229003F3DB8 /* PactSafe-Configuration.plist */; };
-		42DE690F2729036F003F3DB8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 42DE690E2729036F003F3DB8 /* FirebaseAuth */; };
 		42E65E8A233D0B5A00B41888 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E65E89233D0B5A00B41888 /* AppDelegate.swift */; };
 		42E65E8C233D0B5A00B41888 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E65E8B233D0B5A00B41888 /* SceneDelegate.swift */; };
 		42E65E8E233D0B5A00B41888 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E65E8D233D0B5A00B41888 /* SignUpViewController.swift */; };
@@ -50,7 +48,6 @@
 		426A19262350BADD00C10D5A /* LoginWithCheckboxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithCheckboxViewController.swift; sourceTree = "<group>"; };
 		42751D72234E14AC00D20668 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		42D2336723E9F7C400BD0AE4 /* SignUpProgrammaticallyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpProgrammaticallyViewController.swift; sourceTree = "<group>"; };
-		42DE690927290040003F3DB8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		42DE690B27290229003F3DB8 /* PactSafe-Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PactSafe-Configuration.plist"; sourceTree = "<group>"; };
 		42E65E86233D0B5A00B41888 /* PactSafe iOS Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PactSafe iOS Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E65E89233D0B5A00B41888 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,7 +71,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				42E65EBC233D0B8000B41888 /* PactSafe in Frameworks */,
-				42DE690F2729036F003F3DB8 /* FirebaseAuth in Frameworks */,
 				42DE69082728FFF2003F3DB8 /* PactSafe in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,7 +135,6 @@
 				42E65E92233D0B5D00B41888 /* Assets.xcassets */,
 				42E65E94233D0B5D00B41888 /* LaunchScreen.storyboard */,
 				42E65E97233D0B5D00B41888 /* Info.plist */,
-				42DE690927290040003F3DB8 /* GoogleService-Info.plist */,
 				42DE690B27290229003F3DB8 /* PactSafe-Configuration.plist */,
 			);
 			path = "PactSafe iOS Demo";
@@ -182,7 +177,6 @@
 			packageProductDependencies = (
 				42E65EBB233D0B8000B41888 /* PactSafe */,
 				42DE69072728FFF2003F3DB8 /* PactSafe */,
-				42DE690E2729036F003F3DB8 /* FirebaseAuth */,
 			);
 			productName = "PactSafe iOS Demo";
 			productReference = 42E65E86233D0B5A00B41888 /* PactSafe iOS Demo.app */;
@@ -258,7 +252,6 @@
 			mainGroup = 42E65E7D233D0B5A00B41888;
 			packageReferences = (
 				42DE69062728FFF2003F3DB8 /* XCRemoteSwiftPackageReference "pactsafe-ios-sdk" */,
-				42DE690D2729036F003F3DB8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 42E65E87233D0B5A00B41888 /* Products */;
 			projectDirPath = "";
@@ -278,7 +271,6 @@
 			files = (
 				42DE690C27290229003F3DB8 /* PactSafe-Configuration.plist in Resources */,
 				42E65E96233D0B5D00B41888 /* LaunchScreen.storyboard in Resources */,
-				42DE690A27290040003F3DB8 /* GoogleService-Info.plist in Resources */,
 				42E65E93233D0B5D00B41888 /* Assets.xcassets in Resources */,
 				42E65E91233D0B5A00B41888 /* Main.storyboard in Resources */,
 			);
@@ -655,14 +647,6 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		42DE690D2729036F003F3DB8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 8.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -670,11 +654,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 42DE69062728FFF2003F3DB8 /* XCRemoteSwiftPackageReference "pactsafe-ios-sdk" */;
 			productName = PactSafe;
-		};
-		42DE690E2729036F003F3DB8 /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 42DE690D2729036F003F3DB8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
 		};
 		42E65EBB233D0B8000B41888 /* PactSafe */ = {
 			isa = XCSwiftPackageProductDependency;

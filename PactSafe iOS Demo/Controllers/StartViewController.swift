@@ -6,7 +6,6 @@
 //  Copyright © 2019 Tim Morse . All rights reserved.
 //
 
-import FirebaseAuth
 import PactSafe
 import UIKit
 
@@ -17,10 +16,6 @@ class StartViewController: UIViewController {
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-
-    if Auth.auth().currentUser != nil {
-      performSegue(withIdentifier: "startToHomeSegue", sender: self)
-    }
   }
 
   @IBAction func signUpButton(_ sender: UIButton) {

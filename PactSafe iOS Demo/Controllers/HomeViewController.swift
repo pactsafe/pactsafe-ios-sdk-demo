@@ -6,7 +6,6 @@
 //  Copyright © 2019 Tim Morse . All rights reserved.
 //
 
-import FirebaseAuth
 import UIKit
 
 class HomeViewController: UIViewController {
@@ -15,11 +14,6 @@ class HomeViewController: UIViewController {
   }
 
   @IBAction func logout(_ sender: UIButton) {
-    do {
-      try Auth.auth().signOut()
-    } catch let error as NSError {
-      print("Error signing out: \(error)")
-    }
     DispatchQueue.main.async {
       self.navigationController?.popToRootViewController(animated: true)
     }

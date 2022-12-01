@@ -6,7 +6,6 @@
 //  Copyright © 2019 Tim Morse . All rights reserved.
 //
 
-import FirebaseAuth
 import PactSafe
 import SafariServices
 import UIKit
@@ -90,30 +89,21 @@ class SignUpViewController: UIViewController {
       return
     }
 
-    // Attempt to create a user with Firebase Auth
-    Auth.auth().createUser(withEmail: emailAddressText, password: passwordText) { _, error in
-      if error == nil {
-        // Use PSCustomData to send additional data about the activity
-        var customData = PSCustomData()
-        customData.firstName = firstNameText
-        customData.lastName = lastNameText
+    // Use PSCustomData to send additional data about the activity
+    var customData = PSCustomData()
+    customData.firstName = firstNameText
+    customData.lastName = lastNameText
 
-        // Create the signer with the specified id and custom data.
-        let signer = PSSigner(signerId: emailAddressText, customData: customData)
+    // Create the signer with the specified id and custom data.
+    let signer = PSSigner(signerId: emailAddressText, customData: customData)
 
-        // Use the sendAgreed method on the clickwrap to send acceptance.
-        self.pactSafeClickWrap.sendAgreed(signer: signer) { error in
-          DispatchQueue.main.async {
-            if error == nil {
-              self.performSegue(withIdentifier: "signUpToHomeSegue", sender: self)
-            } else {
-              self.formAlert("\(String(describing: error))")
-            }
-          }
-        }
-      } else {
-        DispatchQueue.main.async {
-          self.formAlert(error?.localizedDescription ?? "We hit a snag :(. Please try again.")
+    // Use the sendAgreed method on the clickwrap to send acceptance.
+    self.pactSafeClickWrap.sendAgreed(signer: signer) { error in
+      DispatchQueue.main.async {
+        if error == nil {
+          self.performSegue(withIdentifier: "signUpToHomeSegue", sender: self)
+        } else {
+          self.formAlert("\(String(describing: error))")
         }
       }
     }

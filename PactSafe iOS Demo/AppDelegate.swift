@@ -6,7 +6,6 @@
 //  Copyright © 2019 Tim Morse . All rights reserved.
 //
 
-import Firebase
 import PactSafe
 import UIKit
 
@@ -40,8 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       // Set debugMode to true for debugPrint statements when things aren't working correctly.
       PSApp.shared.debugMode = true
     #endif
-
-    FirebaseApp.configure()
 
     return true
   }

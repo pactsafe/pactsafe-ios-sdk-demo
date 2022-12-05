@@ -6,7 +6,6 @@
 //  Copyright © 2019 Tim Morse . All rights reserved.
 //
 
-import FirebaseAuth
 import PactSafe
 import UIKit
 
@@ -33,9 +32,8 @@ class LoginWithCheckboxViewController: UIViewController {
   private func checkStatus(signerId: String, password: String) {
     ps.signedStatus(for: signerId, groupKey: psGroupKey) { needsAcceptance, contractIds in
       if needsAcceptance {
-        let psAcceptanceVc = PSAcceptanceViewController(self.psGroupKey, signerId: signerId, contractIds: contractIds, customData: nil)
-
         DispatchQueue.main.async {
+          let psAcceptanceVc = PSAcceptanceViewController(self.psGroupKey, signerId: signerId, contractIds: contractIds, customData: nil)
           psAcceptanceVc.delegate = self
           self.show(psAcceptanceVc, sender: nil)
         }
@@ -54,19 +52,7 @@ class LoginWithCheckboxViewController: UIViewController {
   }
 
   private func loginUser() {
-    guard let signerId = psSignerId, let password = passwordText else { return }
-
-    Auth.auth().signIn(withEmail: signerId, password: password) { _, error in
-      // Authentication succeeded
-      DispatchQueue.main.async {
-        if error == nil {
-          self.segueToHome()
-        } else {
-          let alert = self.basicAlert("Error", message: error?.localizedDescription ?? "Something went wrong logging in. Try Again.")
-          self.present(alert, animated: true, completion: nil)
-        }
-      }
-    }
+    self.segueToHome()
   }
 
   @IBAction func submit(_ sender: UIButton) {
